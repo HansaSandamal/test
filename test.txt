@@ -1,2 +1,31 @@
-hansa
-sandamal
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int day,date;
+    int i,j,k;
+    printf("No of Days: ");
+    scanf("%d",&day);
+    printf("starting date[1-Mpnday/7-Sunday]: ");
+    scanf("%d",&date);
+    printf("\n\n\n\t\tThe month you need\n");
+    printf("\t\t==================\n");
+    printf("Mon\tTue\tWed\tThu\tFri\tSat\tSun\n");
+    for(i=1;i<date;i++)
+    {
+        printf("\t");
+    }
+    for(j=1;j<=day;j++,date++)
+    {
+        if(date==8)
+        {
+            printf("\n");
+            date=1;
+        }
+        printf("%d\t",j);
+    }
+
+    return 0;
+}
+
